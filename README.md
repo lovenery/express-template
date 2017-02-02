@@ -2,5 +2,5 @@
 
 ## Install
 `npm install`  
-`cp .env.json.example .env`
-`npm start` (`npm install nodemon -g`)  
+`cp .env.json.example .env`  
+`npm start` ( =`nodemon`)  
