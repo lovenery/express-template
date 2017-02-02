@@ -1,5 +1,5 @@
 {
-  "name": "api-template",
+  "name": "mena-template",
   "version": "0.1.0",
   "description": "test",
   "main": "app.js",
@@ -15,6 +15,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lovenery/api-template.git"
+    "url": "https://github.com/lovenery/mena-template.git"
   }
 }
