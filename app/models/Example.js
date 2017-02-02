@@ -3,8 +3,8 @@ var mongoose = require('mongoose');
 var exampleSchema = mongoose.Schema({
     name: String,
     age: {
-    	type: Number,
-    	required: [true, 'where is your age ?']
+        type: Number,
+        required: [true, 'where is your age ?']
     }
 });
 
