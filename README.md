@@ -13,3 +13,4 @@ MENA = Mongo + Express + Node + API
 - express [site](http://expressjs.com/) | [Github](https://github.com/expressjs/express)
 - body-parser [Github](https://github.com/expressjs/body-parser)
 - mongoose [site](http://mongoosejs.com/) | [Github](https://github.com/Automattic/mongoose)
+- dotenv [Github](https://github.com/motdotla/dotenv)
