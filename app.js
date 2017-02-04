@@ -3,7 +3,6 @@ var express = require('express');
 var http = require('http');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var jwt = require('jsonwebtoken');
 var dotenv = require('dotenv').config();
 
 // setup
@@ -15,18 +14,10 @@ mongoose.connect(process.env.DB_HOST);
 
 // server
 var server = http.createServer(app);
-var port = process.env.PORT || 3000;
+var port = process.env.PORT;
 server.listen(port);
 console.log('Server running on port: ' + port);
 
 // endpoint
-app.get('/', function(req, res){
-    res.end('hi');
-});
-app.post('/', function(req, res){
-    res.json(req.body);
-});
-
-var example = express.Router();
-require('./app/routes/example')(example);
-app.use('/example', example);
+var routes = require('./app/routes.js');
+routes(app);
