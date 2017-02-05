@@ -7,6 +7,7 @@ var dotenv = require('dotenv').config();
 
 // setup
 var app = express();
+app.use(require('./config/cors'));
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: false}));
 mongoose.Promise = global.Promise;
@@ -14,9 +15,8 @@ mongoose.connect(process.env.DB_HOST);
 
 // server
 var server = http.createServer(app);
-var port = process.env.PORT;
-server.listen(port);
-console.log('Server running on port: ' + port);
+server.listen(process.env.PORT);
+console.log('Server running on port: ' + process.env.PORT);
 
 // endpoint
 var routes = require('./app/routes.js');
