@@ -12,7 +12,7 @@ var dotenv = require('dotenv').config();
 // limiter(require('./config/limiter'));
 app.use(require('./config/cors'));
 app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}));
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DB_HOST);
 
