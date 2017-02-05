@@ -2,7 +2,10 @@ module.exports = {
     path: '*',
     method: 'all',
     lookup: 'connection.remoteAddress',
-    // 5000 requests per hour
+    // 5000 requests per hour, use `$ redis-cli flushall` to clear
     total: 5000,
-    expire: 1000 * 60 * 60
+    expire: 1000 * 60 * 60,
+    onRateLimited: function (req, res, next) {
+        next({ message: 'Rate limit exceeded', status: 429 })
+    }
 }
