@@ -12,8 +12,10 @@
     "body-parser": "^1.16.0",
     "dotenv": "^4.0.0",
     "express": "^4.14.1",
+    "express-limiter": "^1.6.0",
     "jsonwebtoken": "^7.2.1",
-    "mongoose": "^4.8.1"
+    "mongoose": "^4.8.1",
+    "redis": "^2.6.5"
   },
   "repository": {
     "type": "git",

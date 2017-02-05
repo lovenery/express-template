@@ -1,12 +1,15 @@
 // modules
 var express = require('express');
+var app = express();
 var http = require('http');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var dotenv = require('dotenv').config();
+var client = require('redis').createClient()
+var limiter = require('express-limiter')(app, client)
 
 // setup
-var app = express();
+limiter(require('./config/limiter'));
 app.use(require('./config/cors'));
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: false}));
