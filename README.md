@@ -15,10 +15,11 @@ MENA = Mongo + Express + Node + API
 `npm start` ( =`nodemon`)  
 
 ## Package References
-- nodemon [site](https://nodemon.io/) | [Github](https://github.com/remy/nodemon)
-- express [site](http://expressjs.com/) | [zh-tw](http://expressjs.com/zh-tw/) | [Github](https://github.com/expressjs/express)
-- body-parser [Github](https://github.com/expressjs/body-parser)
-- mongoose [site](http://mongoosejs.com/) | [Github](https://github.com/Automattic/mongoose)
-- dotenv [Github](https://github.com/motdotla/dotenv)
-- jwt [site](https://jwt.io/) | [Github](https://github.com/auth0/node-jsonwebtoken)
-- express-limiter [Github](https://github.com/ded/express-limiter) or [ratelimiter by tj](https://github.com/tj/node-ratelimiter) exactly same thing you can replace it (modify app.js & config/limiter.js)
+- nodemon [Site](https://nodemon.io/) | [GitHub](https://github.com/remy/nodemon)
+- express [Site](http://expressjs.com/) | [zh-tw](http://expressjs.com/zh-tw/) | [GitHub](https://github.com/expressjs/express)
+- body-parser [GitHub](https://github.com/expressjs/body-parser)
+- mongoose [Site](http://mongoosejs.com/) | [GitHub](https://github.com/Automattic/mongoose)
+- dotenv [GitHub](https://github.com/motdotla/dotenv)
+- jwt [Site](https://jwt.io/) | [GitHub](https://github.com/auth0/node-jsonwebtoken)
+- express-limiter [GitHub](https://github.com/ded/express-limiter) or [ratelimiter by tj](https://github.com/tj/node-ratelimiter) exactly same thing you can replace it (modify app.js & config/limiter.js)
+- request [GitHub](https://github.com/request/request)
