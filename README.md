@@ -23,3 +23,4 @@ My Web Template using Node.js(Express) Mongodb
 - express-limiter [GitHub](https://github.com/ded/express-limiter) or [ratelimiter by tj](https://github.com/tj/node-ratelimiter) exactly same thing you can replace it (modify app.js & config/limiter.js)
 - request [GitHub](https://github.com/request/request)
 - morgan [GitHub](https://github.com/expressjs/morgan)
+- ejs [Site](http://ejs.co/) [GitHub](https://github.com/mde/ejs) 

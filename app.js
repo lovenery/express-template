@@ -15,14 +15,24 @@ app.use(morgan('dev'))
 app.use(require('./config/cors'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+// view engine
+app.set('views', require('path').join(__dirname, 'app/views'))
+app.set('view engine', 'ejs')
+
+// database
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DB_HOST);
+
+// endpoints
+const routes = require('./app/routes.js')
+routes(app)
+
+// error handler
+const error = require('./config/error.js')
+error(app)
 
 // server
 var server = http.createServer(app);
 server.listen(process.env.PORT);
 console.log(`Server running on http://localhost:${process.env.PORT}`);
-
-// endpoint
-var routes = require('./app/routes.js');
-routes(app);
