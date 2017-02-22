@@ -1,6 +1,6 @@
-# MENA Template
+# Hsu Template
 
-MENA = Mongo + Express + Node + API
+My Web Template using Node.js(Express) Mongodb
 
 ## Requirements
 
@@ -9,10 +9,9 @@ MENA = Mongo + Express + Node + API
 - Redis(Optional)
 
 ## Install
-`npm install nodemon -g`  
 `npm install`  
 `cp .env.json.example .env`  
-`npm start` ( =`nodemon`)  
+`npm start`  
 
 ## Package References
 - nodemon [Site](https://nodemon.io/) | [GitHub](https://github.com/remy/nodemon)
@@ -23,3 +22,4 @@ MENA = Mongo + Express + Node + API
 - jwt [Site](https://jwt.io/) | [GitHub](https://github.com/auth0/node-jsonwebtoken)
 - express-limiter [GitHub](https://github.com/ded/express-limiter) or [ratelimiter by tj](https://github.com/tj/node-ratelimiter) exactly same thing you can replace it (modify app.js & config/limiter.js)
 - request [GitHub](https://github.com/request/request)
+- morgan [GitHub](https://github.com/expressjs/morgan)

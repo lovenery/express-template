@@ -1,10 +1,10 @@
 {
-  "name": "mena-template",
+  "name": "hsu-template",
   "version": "0.1.0",
   "description": "test",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon app.js"
   },
   "author": "lovenery",
   "license": "ISC",
@@ -15,11 +15,15 @@
     "express-limiter": "^1.6.0",
     "jsonwebtoken": "^7.2.1",
     "mongoose": "^4.8.1",
+    "morgan": "^1.8.1",
     "redis": "^2.6.5",
     "request": "^2.79.0"
   },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lovenery/mena-template.git"
+    "url": "https://github.com/lovenery/hsu-template.git"
   }
 }
