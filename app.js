@@ -21,7 +21,7 @@ mongoose.connect(process.env.DB_HOST);
 // server
 var server = http.createServer(app);
 server.listen(process.env.PORT);
-console.log('Server running on port: ' + process.env.PORT);
+console.log(`Server running on http://localhost:${process.env.PORT}`);
 
 // endpoint
 var routes = require('./app/routes.js');
