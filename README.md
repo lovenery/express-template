@@ -10,7 +10,7 @@ My Web Template using Node.js(Express) Mongodb
 
 ## Install
 `npm install`  
-`cp .env.json.example .env`  
+`cp .env.example .env`  
 `npm start`  
 
 ## Package References
