@@ -9,6 +9,10 @@ const morgan = require('morgan')
 // var client = require('redis').createClient();
 // var limiter = require('express-limiter')(app, client);
 
+// database
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.DB_HOST);
+
 // setup
 // limiter(require('./config/limiter'));
 app.use(morgan('dev'))
@@ -19,10 +23,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 // view engine
 app.set('views', require('path').join(__dirname, 'app/views'))
 app.set('view engine', 'ejs')
-
-// database
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DB_HOST);
 
 // endpoints
 const routes = require('./app/routes.js')
