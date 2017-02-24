@@ -25,7 +25,7 @@ app.set('views', require('path').join(__dirname, 'app/views'))
 app.set('view engine', 'ejs')
 
 // endpoints
-const routes = require('./app/routes.js')
+const routes = require('./app/app.js')
 routes(app)
 
 // error handler
