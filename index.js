@@ -1,24 +1,24 @@
 // modules
-var express = require('express');
-var app = express();
-var http = require('http');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var dotenv = require('dotenv').config();
+var express = require('express')
+var app = express()
+var http = require('http')
+var bodyParser = require('body-parser')
+var mongoose = require('mongoose')
+var dotenv = require('dotenv').config()
 const morgan = require('morgan')
-// var client = require('redis').createClient();
-// var limiter = require('express-limiter')(app, client);
+// var client = require('redis').createClient()
+// var limiter = require('express-limiter')(app, client)
 
 // database
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DB_HOST);
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.DB_HOST)
 
 // setup
-// limiter(require('./config/limiter'));
+// limiter(require('./config/limiter'))
 app.use(morgan('dev'))
-app.use(require('./config/cors'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(require('./config/cors'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
 
 // view engine
 app.use(express.static('public'))
@@ -34,6 +34,6 @@ const error = require('./config/error.js')
 error(app)
 
 // server
-var server = http.createServer(app);
-server.listen(process.env.PORT);
+var server = http.createServer(app)
+server.listen(process.env.PORT)
 console.log(`Server running on ${process.env.APP_URL}:${process.env.PORT}`)
