@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // view engine
+app.use(express.static('public'))
 app.set('views', require('path').join(__dirname, 'app/views'))
 app.set('view engine', 'ejs')
 
@@ -35,4 +36,4 @@ error(app)
 // server
 var server = http.createServer(app);
 server.listen(process.env.PORT);
-console.log(`Server running on http://localhost:${process.env.PORT}`);
+console.log(`Server running on ${process.env.APP_URL}:${process.env.PORT}`)
