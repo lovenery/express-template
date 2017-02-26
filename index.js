@@ -5,6 +5,7 @@ var http = require('http')
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 var dotenv = require('dotenv').config()
+const path = require('path')
 const morgan = require('morgan')
 // var client = require('redis').createClient()
 // var limiter = require('express-limiter')(app, client)
@@ -12,6 +13,8 @@ const morgan = require('morgan')
 // database
 mongoose.Promise = global.Promise
 mongoose.connect(process.env.DB_HOST)
+    .then(() => console.log('mongodb connection succesful...'))
+    .catch(err => console.error(err));
 
 // setup
 // limiter(require('./config/limiter'))
@@ -21,8 +24,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
 // view engine
-app.use(express.static('public'))
-app.set('views', require('path').join(__dirname, 'app/views'))
+app.use(express.static(path.join(__dirname, 'public')))
+app.set('views', path.join(__dirname, 'app/views'))
 app.set('view engine', 'ejs')
 
 // endpoints
