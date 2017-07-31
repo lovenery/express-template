@@ -1,4 +1,4 @@
-# Hsu Template
+# Express Template
 
 My Web Template using Node.js(Express) Mongodb
 
