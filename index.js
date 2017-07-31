@@ -12,7 +12,7 @@ const morgan = require('morgan')
 
 // database
 mongoose.Promise = global.Promise
-mongoose.connect(process.env.DB_HOST)
+mongoose.connect(process.env.DB_HOST, { useMongoClient: true, })
     .then(() => console.log('mongodb connection succesful...'))
     .catch(err => console.error(err));
 
